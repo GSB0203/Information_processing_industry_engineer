@@ -16,9 +16,14 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2><b>홈쇼핑 회원 정보 수정</b></h2>
-	<form name="frm">
+	<form method="post" action="action.jsp" name="frm">
+	
+	<input type="hidden" name="mode" value="modify">
+	
 	<table border="1">
 <%
+	request.setCharacterEncoding("UTF-8");
+
 	Connection conn = null;  //연결을 시켜줄 변수
 	Statement stmt = null;  //sql을 실행 시켜줄 변수
 	String mod_custno = request.getParameter("mod_custno");
@@ -44,7 +49,7 @@
 		grade = rs.getString("grade");
 		city = rs.getString("city");
 		
-		SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-mm-dd");
+		SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd");
 		joindateStr = transFormat.format(joindate);
 	}catch(Exception e) {
 		e.printStackTrace();

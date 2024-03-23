@@ -15,7 +15,10 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2><b>홈쇼핑 회원 등록</b></h2>
-	<form name="frm">
+	<form method="post" action="action.jsp" name="frm">
+	
+	<input type="hidden" name="mode" value="insert">
+	
 	<table border="1">
 <%
 	Connection conn = null;  //연결을 시켜줄 변수
