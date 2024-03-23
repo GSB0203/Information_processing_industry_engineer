@@ -27,13 +27,13 @@
 	Connection conn = null;  //연결을 시켜줄 변수
 	Statement stmt = null;  //sql을 실행 시켜줄 변수
 	String mod_custno = request.getParameter("mod_custno");
-	String custname = "";
-	String phone = "";
-	String address = "";
+	String custname = " ";
+	String phone = " ";
+	String address = " ";
 	Date joindate;
-	String grade = "";
-	String city = "";
-	String joindateStr ="";
+	String grade = " ";
+	String city = " ";
+	String joindateStr =" ";
 	
 	try {
 		conn = Util.getConnection();  //DB 연결

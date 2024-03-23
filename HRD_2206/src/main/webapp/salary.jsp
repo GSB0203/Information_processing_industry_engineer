@@ -25,7 +25,7 @@
 <%
 	Connection conn = null;  //연결을 시켜줄 변수
 	Statement stmt = null;  //sql을 실행 시켜줄 변수
-	String grade = "";
+	String grade = " ";
 	try {
 		conn = Util.getConnection();  //DB 연결
 		stmt = conn.createStatement();  //sql을 실행시키기 위한 변수 생성

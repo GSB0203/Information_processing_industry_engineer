@@ -33,33 +33,32 @@ try {
 	String sql = " ";
 	
 	switch(mode) {
-	case "insert":
-		sql = "INSERT INTO member_tbl_02 VALUES(" + custno + "," + 
-												"'" + custname + ",'" + 
-												"'" + phone + ",'" + 
-												"'" + address + ",'" + 
-										"TO_DATE('" + joindate + "', 'yyyy-MM-dd')," +
-												"'" + grade + ",'" + 
-												"'" + city + "')";
-		stmt.executeUpdate(sql);
-
+    case "insert":
+        sql = "INSERT INTO member_tbl_02 VALUES(" + custno + "," + 
+                                                "'" + custname + "'," + 
+                                                "'" + phone + "'," + 
+                                                "'" + address + "'," + 
+                                                "TO_DATE('" + joindate + "', 'yyyy-MM-dd')," +
+                                                "'" + grade + "'," + 
+                                                "'" + city + "')";
+        stmt.executeUpdate(sql);
 %>
 <jsp:include page="join.jsp"></jsp:include>
 <%
-		
-	break;
-	case "modify":
-		sql = "UPDATE member_tbl_02 SET " +
-				"custname = '" + custname + ",'" + 
-				"phone = '" + phone + ",'" + 
-				"address = '" + address + ",'" + 
-				"joindate = TO_DATE('" + joindate + ", 'yyyy-MM-dd')," +
-				"grade = '" + grade + ",'" + 
-				"city = '" + city + "' " + 
-				"WHERE custno = " + custno ;
-		stmt.executeUpdate(sql);
-		
+    break;
+
+    case "modify":
+        sql = "UPDATE member_tbl_02 SET " +
+                "custname = '" + custname + "'," +
+                "phone = '" + phone + "'," +
+                "address = '" + address + "'," +
+                "joindate = TO_DATE('" + joindate + "', 'yyyy-MM-dd')," +
+                "grade = '" + grade + "'," +
+                "city = '" + city + "' " +
+                "WHERE custno = " + custno ;
+        stmt.executeUpdate(sql);
 %>
+
 <jsp:include page="modify.jsp"></jsp:include>
 <%
 	break;
