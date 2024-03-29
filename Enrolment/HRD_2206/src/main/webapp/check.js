@@ -24,13 +24,13 @@ function addCheck(){
 		return false;
 	}
 	
-	else if(frm.week.value[0].checked==false && 
-			frm.week.value[1].checked==false && 
-			frm.week.value[2].checked==false &&
-			frm.week.value[3].checked==false &&
-			frm.week.value[4].checked==false) {
+	else if(frm.week[0].checked==false && 
+			frm.week[1].checked==false && 
+			frm.week[2].checked==false &&
+			frm.week[3].checked==false &&
+			frm.week[4].checked==false) {
 		alert("요일이 선택되지 않았습니다.");
-		frm.week.focuss();
+		frm.week.focus();
 		return false;
 	}
 	

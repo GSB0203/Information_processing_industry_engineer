@@ -11,7 +11,7 @@
 <script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp"></jsp:include>
 <section>
-<h2>교과목 목록</h2>
+<h2>교과목 목록 조회/수정</h2>
 <form>
 	<table border="1">
 	<tr>
