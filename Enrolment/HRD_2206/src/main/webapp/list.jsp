@@ -59,9 +59,9 @@
 			String end = end_hour.substring(0,2) + "시" + end_hour.substring(2,4) + "분";
 %>
 			<tr>
-				<td><%=rs.getString(1) %></td>
+				<td><a href="modify.jsp?id=<%=rs.getString(1) %>"><%=rs.getString(1) %></a></td>
 				<td><%=rs.getString(2) %></td>
-				<td><%=rs.getString(3) %></td>
+				<td><%=rs.getInt(3) %></td>
 				<td><%=rs.getString(4) %></td>
 				<td><%=week %></td>
 				<td><%=start %></td>

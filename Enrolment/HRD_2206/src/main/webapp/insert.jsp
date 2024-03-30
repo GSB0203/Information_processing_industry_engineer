@@ -4,7 +4,7 @@
 <html> 
 <head>
 <meta charset="UTF-8">
-<title>join</title>
+<title>insert</title>
 <link href="style.css" rel="stylesheet">
 <script type="text/javascript" src="check.js"></script>
 </head>
@@ -13,7 +13,7 @@
 
 <section>
 <h2>교과목 추가</h2>
-<form>
+<form name="frm">
 <table border="1">
 <tr>
 	<td>과목 코드</td>
