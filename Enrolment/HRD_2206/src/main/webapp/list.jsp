@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>list</title>
-<link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 <script type="text/javascript" src="check.js"></script>
@@ -66,7 +66,7 @@
 				<td><%=week %></td>
 				<td><%=start %></td>
 				<td><%=end %></td>
-				<td>삭제</td>
+				<td><a href="action.jsp?id=<%=rs.getString(1)%>&mode=delete">삭제</a></td>
 			</tr>
 			
 <%

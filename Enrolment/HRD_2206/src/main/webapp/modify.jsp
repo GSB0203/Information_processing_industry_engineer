@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>modify</title>
-<link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 <script type="text/javascript" src="check.js"></script>
@@ -15,7 +15,8 @@
 
 <section>
 <h2><b>교과목 수정</b></h2><br>
-<form name="frm">
+<form method="post" action="action.jsp" name="frm">
+<input type="hidden" name="mode" value="modify">
 <table border="1">
 <%
 request.setCharacterEncoding("UTF-8");
@@ -27,6 +28,7 @@ try {
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, id);
 	ResultSet rs = pstmt.executeQuery();
+	
 	rs.next();
 	String lecturer = rs.getString(4);
 	String week = rs.getString(5);
@@ -70,11 +72,11 @@ try {
 <tr>
 	<td>요일</td>
 	<td>
-	<input type="radio" value="1" <%if(week.equals("1")) out.println("checked"); %>> 월
-	<input type="radio" value="2" <%if(week.equals("2")) out.println("checked"); %>> 화
-	<input type="radio" value="3" <%if(week.equals("3")) out.println("checked"); %>> 수
-	<input type="radio" value="4" <%if(week.equals("4")) out.println("checked"); %>> 목
-	<input type="radio" value="5" <%if(week.equals("5")) out.println("checked"); %>> 금
+		<input type="radio" name="week" value="1" <%if(week.equals("1")) out.println("checked"); %>> 월
+		<input type="radio" name="week" value="2" <%if(week.equals("2")) out.println("checked"); %>> 화
+		<input type="radio" name="week" value="3" <%if(week.equals("3")) out.println("checked"); %>> 수
+		<input type="radio" name="week" value="4" <%if(week.equals("4")) out.println("checked"); %>> 목
+		<input type="radio" name="week" value="5" <%if(week.equals("5")) out.println("checked"); %>> 금
 	</td>
 </tr>
 <tr>

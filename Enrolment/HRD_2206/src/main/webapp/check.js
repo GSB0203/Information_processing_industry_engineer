@@ -64,5 +64,5 @@ function modify() {
 
 function res() {
 	alert("교과목 수정이 취소되었습니다!");
-	doucument.frm.rsest();
+	document.frm.reset();
 }
