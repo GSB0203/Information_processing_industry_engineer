@@ -7,6 +7,6 @@
 <title>footer</title>
 </head>
 <body>
-<p>Copyright© 서울문화고등학교 사물인터넷과 All Right Reserved.</p>
+<footer>Copyright© 서울문화고등학교 사물인터넷과 All Right Reserved.</footer>
 </body>
 </html>

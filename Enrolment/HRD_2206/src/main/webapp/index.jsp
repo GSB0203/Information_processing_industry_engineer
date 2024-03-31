@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>index</title>
-
+<link href="style.css" rel="stylesheet">
 </head>
 
 <body>

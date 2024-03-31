@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>insert</title>
-
+<link href="style.css" rel="stylesheet">
 <script type="text/javascript" src="check.js"></script>
 </head>
 <body>

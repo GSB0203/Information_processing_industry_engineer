@@ -7,7 +7,7 @@
 <title>header</title>
 </head>
 <body>
-<h2>수강신청 도우미 사이트</h2>
+<header>수강신청 도우미 사이트</header>
 <nav>
 <a href="list.jsp">교과목목록 조회/수정</a>
 <a href="insert.jsp">교과목 추가</a>

@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>list</title>
-
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
 <script type="text/javascript" src="check.js"></script>
