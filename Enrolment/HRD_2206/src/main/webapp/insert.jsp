@@ -13,7 +13,7 @@
 
 <section>
 <h2>교과목 추가</h2>
-<form name="frm">
+<form method="post" action="action.jsp" name="frm">
 <input type="hidden" name="mode" value="insert">
 <table border="1">
 <tr>

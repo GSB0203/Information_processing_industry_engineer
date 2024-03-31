@@ -21,7 +21,6 @@ try{
 	
 	switch(mode) {
 	case "insert":
-		System.out.println("insert");
 		sql = "INSERT INTO course_tbl VALUES(?,?,?,?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, id);
@@ -34,7 +33,7 @@ try{
 		
 		pstmt.executeUpdate();
 %>
-<jsp:include page="insert.jsp"></jsp:include>
+<jsp:forward page="insert.jsp"></jsp:forward>
 <%
 		break;
 		
@@ -51,7 +50,7 @@ try{
 		
 		pstmt.executeUpdate();
 %>
-<jsp:include page="modify.jsp"></jsp:include>
+<jsp:forward page="modify.jsp"></jsp:forward>
 <%
 		break;
 
@@ -62,7 +61,7 @@ try{
 		
 		pstmt.executeUpdate();
 %>
-<jsp:include page="list.jsp"></jsp:include>
+<jsp:forward page="list.jsp"></jsp:forward>
 <%
 		break;
 	}

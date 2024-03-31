@@ -47,7 +47,7 @@ function addCheck(){
 	}
 	else 
 		alert("교과목 등록이 완료되었습니다!");
-		doucument.frm.submit();
+		document.frm.submit();
 		
 	return true;
 }
