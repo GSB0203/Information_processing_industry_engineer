@@ -62,7 +62,7 @@
 </tr>
 <tr >
 	<td colspan='2'>
-	<input type="button" value="추가" onclick="addCheck()">
+	<input type="submit" value="추가" onclick="addCheck()">
 	<input type="button" value="목록" onclick="search()">
 	</td>
 </tr>

@@ -9,6 +9,7 @@
 <title>list</title>
 <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 <script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp"></jsp:include>
@@ -33,9 +34,10 @@
 	try {
 		Connection conn = Util.getConnection();
 		String sql = "SELECT id, co.name cname, credit, le.name lname, week, start_hour, end_hour FROM course_tbl co, lecturer_tbl le WHERE co.lecturer = le.idx ORDER BY id";
-		
+
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
+		
 		while(rs.next()) {
 			String week = rs.getString(5);
 			switch(week) {

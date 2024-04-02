@@ -9,6 +9,7 @@
 <title>modify</title>
 <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 <script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp"></jsp:include>
@@ -59,12 +60,12 @@ try {
 	<td>
 	<select name="lecturer">
 		<option value=""> 담당 강사 </option>
-		<option value="1" <%if(lecturer.equals("1") )  out.println("selected");%>> 김교수 </option>
-		<option value="2" <%if(lecturer.equals("2") )  out.println("selected");%>> 이교수 </option>
-		<option value="3" <%if(lecturer.equals("3") )  out.println("selected");%>> 박교수 </option>
-		<option value="4" <%if(lecturer.equals("4") )  out.println("selected");%>> 유교수 </option>
-		<option value="5" <%if(lecturer.equals("5") )  out.println("selected");%>> 최교수 </option>
-		<option value="6" <%if(lecturer.equals("6") )  out.println("selected");%>> 임교수 </option>
+		<option value="1" <%if(lecturer.equals("1"))  out.println("selected");%>> 김교수 </option>
+		<option value="2" <%if(lecturer.equals("2"))  out.println("selected");%>> 이교수 </option>
+		<option value="3" <%if(lecturer.equals("3"))  out.println("selected");%>> 박교수 </option>
+		<option value="4" <%if(lecturer.equals("4"))  out.println("selected");%>> 유교수 </option>
+		<option value="5" <%if(lecturer.equals("5"))  out.println("selected");%>> 최교수 </option>
+		<option value="6" <%if(lecturer.equals("6"))  out.println("selected");%>> 임교수 </option>
 		
 	</select>
 	</td>
