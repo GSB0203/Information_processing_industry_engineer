@@ -10,9 +10,9 @@
 <body>
 
 <jsp:include page="header.jsp"></jsp:include>
-<form name="frm">
-<h2><b>오디션 등록</b></h2>
 <section>
+<h2><b>오디션 등록</b></h2>
+<form name="frm" method="post" action="action.jsp">
 	<table border="1">
 		<tr>
 			<td>참가번호</td>
@@ -33,8 +33,8 @@
 		<tr>
 			<td>성별</td>
 			<td>
-				<input type="radio" name="gender">남성
-				<input type="radio" name="gender">여성
+				<input type="radio" name="gender" value="1">남성
+				<input type="radio" name="gender" value="2">여성
 			</td>
 		</tr>
 		<tr>
@@ -59,8 +59,8 @@
 			</td>
 		</tr>
 	</table>
-</section>
 </form>
+</section>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
