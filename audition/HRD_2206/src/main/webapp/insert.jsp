@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>insert</title>
+<link rel="stylesheet" href="style.css">
 <script type="text/javascript" src="check.js"></script>
 </head>
 <body>
@@ -55,7 +56,7 @@
 		<tr>
 			<td colspan="2">
 				<input type="button" value="오디션 등록" onclick="addCheck()">
-				<input type="button" value="다시쓰기" onclick="res">
+				<input type="button" value="다시쓰기" onclick="res()">
 			</td>
 		</tr>
 	</table>

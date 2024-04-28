@@ -5,13 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>index</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<form name="frm">
-<h2><b>과정평가형 자격 CBQ</b></h2>
 <section>
+<h2><b>과정평가형 자격 CBQ</b></h2>
+<form name="frm">
 	<p>
 	국가직무능력표준(National Conpetency Sandards)으로 설계된 교육•훈련과정을 체계적으로 이수하고 내•외부 평가를 거쳐 취득하는 국가기술자격입니다.<br>
 	<b>
@@ -20,8 +21,9 @@
 	과정평가형 자격은<br>
 	현장 중심형 인재육성을 지원합니다.
 	</b>
-</section>
+	</p>
 </form>
+</section>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

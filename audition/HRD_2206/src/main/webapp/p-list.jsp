@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>p-list</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -29,7 +30,7 @@
 	try {	
 
 		Connection conn = Util.getConnection();
-		String sql ="select artist_id, artist_name, birth, gender, talent, agency from tbl_artist";
+		String sql ="select artist_id, artist_name, birth, gender, talent, agency from tbl_artist order by artist_id";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		
