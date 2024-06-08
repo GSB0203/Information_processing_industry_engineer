@@ -1,3 +1,4 @@
+<%@page import="java.io.Console"%>
 <%@page import="DBPKG.Util"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -31,8 +32,9 @@
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
-			String recommend = rs.getString(5);
-			if(recommend == "1") recommend = "연령권장";
+			int rrecommend = rs.getInt(5);
+			String recommend = "";
+			if(rrecommend == 1) recommend = "연령권장";
 			else recommend = "위험군 권장";
 			
 %>
