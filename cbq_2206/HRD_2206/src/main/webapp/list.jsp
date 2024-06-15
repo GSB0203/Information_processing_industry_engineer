@@ -12,7 +12,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 <h2><b>차량조회</b></h2>
-<form name="frm" method="post" action="l_action">
+<form name="frm" method="post" action="l_action.jsp">
 <table border="1">
 	<tr>
 		<td>차량번호를 입력하시오.</td>
@@ -21,7 +21,7 @@
 	<tr>
 		<td colspan="2">
 			<input type="submit" onclick="return addCheckList()" value="차량조회">
-			<input type="button" onclick="return backHome()" value="홈으로">
+			<input type="button" onclick="window.location = 'index.jsp'" value="홈으로">
 		</td>
 	</tr>
 </table>
