@@ -25,11 +25,11 @@
 	<tr>
 		<td>차량번호</td>
 		<td>
-			<input type="radio" name="location" value="A001">A001
-			<input type="radio" name="location" value="A002">A002
-			<input type="radio" name="location" value="A003">A003
-			<input type="radio" name="location" value="A004">A004
-			<input type="radio" name="location" value="A005">A005
+			<input type="radio" name="location" value="A001"><b>A001</b>
+			<input type="radio" name="location" value="A002"><b>A002</b>
+			<input type="radio" name="location" value="A003"><b>A003</b>
+			<input type="radio" name="location" value="A004"><b>A004</b>
+			<input type="radio" name="location" value="A005"><b>A005</b>
 		</td>
 	</tr>
 	<tr>

@@ -23,17 +23,18 @@
 		<td>출차시간</td>
 	</tr>
 <%
+	request.setCharacterEncoding("UTF-8");
+	String number = request.getParameter("number");
 	try{
-		request.setCharacterEncoding("UTF-8");
-		String number = request.getParameter("number");
-		System.out.println(number);
-		String sql = "select c.car_number, car_name, owner_name, location, entrance_time, departure_time " +
+		String sql = "select p.car_number, car_name, owner_name, location, entrance_time, departure_time " +
 					 "from tbl_parking p, tbl_car c " +
-					 "where c.car_number = p.car_number and c.car_number like ?";
+					 "where trim(c.car_number) = trim(p.car_number) and trim(p.car_number) = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, "%" + number + "%");
+		pstmt.setString(1, number);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
+			String d_time = rs.getString(6);
+			if(d_time == null) d_time = "";
 %>
 	<tr>
 		<td><%=rs.getString(1) %></td>
@@ -41,7 +42,7 @@
 		<td><%=rs.getString(3) %></td>
 		<td><%=rs.getString(4) %></td>
 		<td><%=rs.getString(5) %></td>
-		<td><%=rs.getString(6) %></td>
+		<td><%=d_time %></td>
 	</tr>
 <%
 		}

@@ -15,13 +15,14 @@
 	String location = request.getParameter("location");
 	String time = request.getParameter("time");
 	try {
-		String sql = "insert into tbl_parking values(?, ?, ?, ?)";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, number);
-		pstmt.setString(2, location);
-		pstmt.setString(3, time);s
-		pstmt.setString(4, "");
-		pstmt.executeUpdate();
+		String sql ="insert into tbl_parking values(?, ?, ?, ?)";
+		
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1,number);
+		ps.setString(2,location);
+		ps.setString(3,time);
+		ps.setString(4,"");
+		ps.executeQuery();
 	} catch(Exception e) {
 		e.printStackTrace();
 	}
