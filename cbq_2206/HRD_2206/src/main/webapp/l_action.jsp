@@ -26,7 +26,7 @@
 	request.setCharacterEncoding("UTF-8");
 	String number = request.getParameter("number");
 	try{
-		String sql = "select p.car_number, car_name, owner_name, location, entrance_time, departure_time " +
+		String sql = "select trim(p.car_number), car_name, owner_name, location, entrance_time, departure_time " +
 					 "from tbl_parking p, tbl_car c " +
 					 "where trim(c.car_number) = trim(p.car_number) and trim(p.car_number) = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
