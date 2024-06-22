@@ -19,9 +19,10 @@
 	<tr>
 		<td>차량번호</td>
 		<td>
-			<select name="number" onchange ="get_name(this.value)">
+			<select name="number" onchange="get_name(this.value)">
 				<option value="">차량번호</option>
-<%				 		    
+<%		
+	request.setCharacterEncoding("UTF-8");
 	try {
 		String sql =  "select trim(p.car_number), c.owner_name " +
 		   			  "from tbl_parking p, tbl_car c " +
@@ -32,21 +33,21 @@
 		while(rs.next()) {
 %>							
 				<option value="<%=rs.getString(1)%>"><%=rs.getString(1)%></option>
-<%
-		}
-
+<% 
 %>
 			</select>
 		</td>
 	</tr>
 	<tr>
 		<td>소유자이름</td>
-		<td><input type="text" name="owner" value= "" readonly></td>
-<% 
-	} catch(Exception e) {
+		<td><input type="text" name="owner" value="" readonly></td>
+<%
+		}
+	}catch(Exception e) {
 		e.printStackTrace();
 	}
 %>
+
 	</tr>
 	<tr>
 		<td>출차시간</td>

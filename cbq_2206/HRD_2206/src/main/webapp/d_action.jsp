@@ -13,9 +13,8 @@
 	request.setCharacterEncoding("UTF-8");
 	String time = request.getParameter("time");
 	String number = request.getParameter("number");
-	System.out.println(number);
 try {
-	String sql = "update tbl_parking set departure_time=? where trim(car_number) = ?";
+	String sql = "update tbl_parking set departure_time = ? where trim(car_number) = ?";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, time);
 	pstmt.setString(2, number);

@@ -30,6 +30,7 @@
 					 "from tbl_parking p, tbl_car c " +
 					 "where trim(c.car_number) = trim(p.car_number) and trim(p.car_number) = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
+	
 		pstmt.setString(1, number);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
